@@ -1,0 +1,45 @@
+<script setup lang="ts">
+import Logo from '@/assets/Logo.svg'
+import Globe from '@/assets/globe-svgrepo-com.svg'
+import ArrowDown from '@/assets/angle-down-solid.svg'
+import Twitter from '@/assets/twitter.svg'
+import Facebook from '@/assets/instagram.svg'
+import Instagram from '@/assets/facebook.svg'
+</script>
+<template>
+  <nav
+    class="sticky top-0 bg-background h-44 flex flex-col w-screen gap-7 border-solid border border-b-[#C2C2D6] z-50"
+  >
+    <!-- First Row w/Logo & Language setting-->
+    <div class="flex flex-row justify-between px-12 mt-6 items-center">
+      <!-- Logo -->
+      <img :src="Logo" alt="Woman's Secrets" class="" />
+
+      <!-- Language -->
+      <div class="flex flex-row items-center">
+        <img :src="Globe" alt="globe" class="size-6" />
+        <span class="mx-1">English</span>
+        <img :src="ArrowDown" alt="Arrow Down" class="mx-1 size-6" />
+      </div>
+    </div>
+
+    <!-- Second Row w/Links & Social Media-->
+    <div class="flex flex-row justify-between h-10 px-12 py-3 items-center">
+      <!-- Links -->
+      <div class="flex flex-row gap-6 items-center">
+        <button class="hover:underline">Home</button>
+        <button class="hover:underline">About us</button>
+        <button class="hover:underline">Our Service</button>
+        <button class="hover:underline">Partner Brands</button>
+        <button class="hover:underline">Contact Us</button>
+      </div>
+
+      <!-- Social Media -->
+      <div class="flex flex-row items-center gap-3 mr-5">
+        <img :src="Twitter" alt="globe" class="size-5" />
+        <img :src="Instagram" alt="globe" class="size-5" />
+        <img :src="Facebook" alt="globe" class="size-5" />
+      </div>
+    </div>
+  </nav>
+</template>
