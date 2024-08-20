@@ -31,9 +31,15 @@ import Instagram from '@/assets/facebook.svg'
           <div>00966 444 673 56</div>
           <div>support@womansecrets.com</div>
           <div class="flex flex-row items-center gap-5 p-5">
-            <img :src="Twitter" alt="globe" class="size-5" />
-            <img :src="Instagram" alt="globe" class="size-5" />
-            <img :src="Facebook" alt="globe" class="size-5" />
+            <button>
+              <img :src="Twitter" alt="globe" class="size-5" />
+            </button>
+            <button>
+              <img :src="Instagram" alt="globe" class="size-5" />
+            </button>
+            <button>
+              <img :src="Facebook" alt="globe" class="size-5" />
+            </button>
           </div>
         </div>
         <div class="flex flex-col w-full">

@@ -36,9 +36,15 @@ import Instagram from '@/assets/facebook.svg'
 
       <!-- Social Media -->
       <div class="flex flex-row items-center gap-3 mr-5">
-        <img :src="Twitter" alt="globe" class="size-5" />
-        <img :src="Instagram" alt="globe" class="size-5" />
-        <img :src="Facebook" alt="globe" class="size-5" />
+        <button>
+          <img :src="Twitter" alt="globe" class="size-5" />
+        </button>
+        <button>
+          <img :src="Instagram" alt="globe" class="size-5" />
+        </button>
+        <button>
+          <img :src="Facebook" alt="globe" class="size-5" />
+        </button>
       </div>
     </div>
   </nav>
