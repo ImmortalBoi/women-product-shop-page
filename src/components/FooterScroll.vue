@@ -32,9 +32,9 @@ const submitForm = async () => {
 }
 </script>
 <template>
-  <footer class="h-80 max-md:h-full bg-primary flex flex-col justify-between">
+  <footer class="h-80 max-lg:h-full bg-primary flex flex-col justify-between">
     <div
-      class="h-52 max-md:h-full py-6 px-12 gap-8 md:gap-32 flex flex-row items-center max-md:flex-col"
+      class="h-52 max-lg:h-full py-6 px-12 gap-8 lg:gap-32 flex flex-row items-center max-lg:flex-col"
     >
       <div class="flex flex-row gap-8 items-start mt-3">
         <div class="flex flex-col">
@@ -51,10 +51,10 @@ const submitForm = async () => {
           <div>Privacy Policy</div>
         </div>
       </div>
-      <div class="flex-shrink-0 max-md:hidden">
+      <div class="flex-shrink-0 max-lg:hidden">
         <img :src="data?.logo" alt="Woman's Secrets" class="w-52 h-auto object-contain" />
       </div>
-      <div class="flex flex-row gap-8 w-full max-md:flex-col">
+      <div class="flex flex-row gap-8 w-full max-lg:flex-col">
         <div class="flex flex-col">
           <div class="font-medium text-2xl mb-6">Contacts</div>
           <div>{{ data?.phone }}</div>

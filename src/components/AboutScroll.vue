@@ -7,9 +7,9 @@ defineProps<{
 }>()
 </script>
 <template>
-  <div class="my-32 h-[45.25rem] max-md:h-full flex flex-row w-screen">
-    <img :src="data?.img" alt="" class="w-[38rem] h-full object-contain max-md:hidden" />
-    <div class="max-md:pl-8 md:mx-20 py-5">
+  <div class="my-32 h-[45.25rem] max-lg:h-full flex flex-row w-screen">
+    <img :src="data?.img" alt="" class="w-[38rem] h-full object-contain max-lg:hidden" />
+    <div class="max-lg:pl-8 lg:mx-20 py-5">
       <div>
         <div class="font-thin text-[7.75rem] mb-10">{{ data?.title }}</div>
         <div class="text-lg">

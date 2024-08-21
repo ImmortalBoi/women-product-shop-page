@@ -93,7 +93,7 @@ const moveRight = () => {
   </div>
   <!-- Carousel Start-->
   <div
-    class="overflow-x-scroll md:overflow-hidden whitespace-nowrap"
+    class="overflow-x-scroll lg:overflow-hidden whitespace-nowrap"
     id="external-carousel"
     ref="externalCarousel"
   >
@@ -113,7 +113,7 @@ const moveRight = () => {
   </div>
 
   <!-- Carousel Buttons-->
-  <div class="flex flex-row gap-3 max-md:hidden">
+  <div class="flex flex-row gap-3 max-lg:hidden">
     <button
       class="rounded-full bg-[#83B7D7] disabled:bg-[#D9D9D9]"
       @click="moveLeft"

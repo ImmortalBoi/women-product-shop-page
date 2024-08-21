@@ -10,9 +10,9 @@ const props = defineProps<{
 </script>
 <template>
   <div
-    class="md:h-[47.5rem] w-screen flex flex-row max-md:flex-col max-md:justify-center max-md:items-center"
+    class="lg:h-[47.5rem] w-screen flex flex-row max-lg:flex-col max-lg:justify-center max-lg:items-center"
   >
-    <div class="md:w-1/3 h-full">
+    <div class="lg:w-1/3 h-full">
       <video
         :src="data?.video"
         autoplay
@@ -22,7 +22,7 @@ const props = defineProps<{
         class="w-full h-full object-cover"
       ></video>
     </div>
-    <div class="w-1/3 h-full flex items-center justify-center flex-col px-8 max-md:py-8">
+    <div class="w-1/3 h-full flex items-center justify-center flex-col px-8 max-lg:py-8">
       <div class="text-[2.5rem] text-center font-medium">
         {{ data?.desc }}
       </div>
@@ -32,7 +32,7 @@ const props = defineProps<{
         ><span class="align-middle">{{ data?.btn_text }}</span></a
       >
     </div>
-    <div class="md:w-1/3 h-full">
+    <div class="lg:w-1/3 h-full">
       <img :src="data?.img" alt="" class="w-full h-full object-cover" />
     </div>
   </div>

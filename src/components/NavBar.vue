@@ -17,11 +17,11 @@ const navToggle = ref(false)
 <template>
   <nav
     class="sticky top-0 bg-background flex flex-col w-screen gap-7 border-solid border border-b-[#C2C2D6] z-50"
-    :class="navToggle == true ? 'h-56' : 'h-28 md:h-44'"
+    :class="navToggle == true ? 'h-56' : 'h-28 lg:h-44'"
   >
     <!-- First Row w/Logo & Language setting-->
     <div class="flex flex-row justify-between px-4 lg:px-12 mt-6 items-center">
-      <button @click="navToggle = !navToggle" class="md:hidden rounded-2xl bg-primary p-2">
+      <button @click="navToggle = !navToggle" class="lg:hidden rounded-2xl bg-primary p-2">
         <img :src="BurgerMenu" alt="" class="size-5" />
       </button>
       <!-- Logo -->
@@ -29,16 +29,16 @@ const navToggle = ref(false)
 
       <!-- Language -->
       <div class="flex flex-row items-center">
-        <img :src="Globe" alt="globe" class="size-6 max-md:size-4" />
-        <span class="max-md:hidden mx-1">English</span>
-        <img :src="ArrowDown" alt="Arrow Down" class="mx-1 size-6 max-md:size-4" />
+        <img :src="Globe" alt="globe" class="size-6 max-lg:size-4" />
+        <span class="max-lg:hidden mx-1">English</span>
+        <img :src="ArrowDown" alt="Arrow Down" class="mx-1 size-6 max-lg:size-4" />
       </div>
     </div>
 
     <!-- Second Row w/Links & Social Media-->
     <div
-      class="flex flex-row justify-between h-10 px-12 py-3 items-center max-md:flex-col max-md:gap-4"
-      :class="navToggle == true ? '' : 'max-md:hidden'"
+      class="flex flex-row justify-between h-10 px-12 py-3 items-center max-lg:flex-col max-lg:gap-4"
+      :class="navToggle == true ? '' : 'max-lg:hidden'"
     >
       <!-- Links -->
       <div class="flex flex-row gap-6 items-center">

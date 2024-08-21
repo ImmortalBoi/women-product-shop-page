@@ -9,9 +9,9 @@ defineProps<{
 }>()
 </script>
 <template>
-  <div class="h-[62.813rem] bg-primary flex flex-col items-center w-full max-md:h-full max-md:py-4">
+  <div class="h-[62.813rem] bg-primary flex flex-col items-center w-full max-lg:h-full max-lg:py-4">
     <div
-      class="h-[13.875rem] flex flex-col w-[56.5rem] max-md:w-full max-md:h-full max-md:p-4 mt-10"
+      class="h-[13.875rem] flex flex-col w-[56.5rem] max-lg:w-full max-lg:h-full max-lg:p-4 mt-10"
     >
       <img :src="data?.img" />
       <div class="text-center text-[#737373]">
