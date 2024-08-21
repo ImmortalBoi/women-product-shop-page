@@ -7,13 +7,17 @@ import Facebook from '@/assets/instagram.svg'
 import Instagram from '@/assets/facebook.svg'
 import BurgerMenu from '@/assets/burger-menu-left-svgrepo-com.svg'
 import { ref } from 'vue'
+import type { Footer } from '@/types'
 
+defineProps<{
+  data: Footer | undefined
+}>()
 const navToggle = ref(false)
 </script>
 <template>
   <nav
-    class="sticky top-0 inset-10 bg-background flex flex-col w-screen gap-7 border-solid border border-b-[#C2C2D6] z-50"
-    :class="navToggle == true ? 'h-44' : 'h-28 md:h-44'"
+    class="sticky top-0 bg-background flex flex-col w-screen gap-7 border-solid border border-b-[#C2C2D6] z-50"
+    :class="navToggle == true ? 'h-56' : 'h-28 md:h-44'"
   >
     <!-- First Row w/Logo & Language setting-->
     <div class="flex flex-row justify-between px-4 lg:px-12 mt-6 items-center">
@@ -21,7 +25,7 @@ const navToggle = ref(false)
         <img :src="BurgerMenu" alt="" class="size-5" />
       </button>
       <!-- Logo -->
-      <img :src="Logo" alt="Woman's Secrets" class="" />
+      <img :src="data?.logo" alt="Woman's Secrets" class="" />
 
       <!-- Language -->
       <div class="flex flex-row items-center">
@@ -33,7 +37,7 @@ const navToggle = ref(false)
 
     <!-- Second Row w/Links & Social Media-->
     <div
-      class="flex flex-row justify-between h-10 px-12 py-3 items-center"
+      class="flex flex-row justify-between h-10 px-12 py-3 items-center max-md:flex-col max-md:gap-4"
       :class="navToggle == true ? '' : 'max-md:hidden'"
     >
       <!-- Links -->
@@ -47,15 +51,15 @@ const navToggle = ref(false)
 
       <!-- Social Media -->
       <div class="flex flex-row items-center gap-3 mr-5">
-        <button>
+        <a :href="data?.socials.twitter">
           <img :src="Twitter" alt="globe" class="size-5" />
-        </button>
-        <button>
+        </a>
+        <a :href="data?.socials.instagram">
           <img :src="Instagram" alt="globe" class="size-5" />
-        </button>
-        <button>
+        </a>
+        <a :href="data?.socials.facebook">
           <img :src="Facebook" alt="globe" class="size-5" />
-        </button>
+        </a>
       </div>
     </div>
   </nav>

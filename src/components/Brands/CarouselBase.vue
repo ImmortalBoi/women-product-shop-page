@@ -5,6 +5,13 @@ import ProductImage3 from '@/assets/new-duo-gabki-do-ombre.webp.svg'
 import ProductImage4 from '@/assets/paint-gel-5g-063-barbie.webp.svg'
 import CarouselCard from './CarouselCard.vue'
 import { ref, computed } from 'vue'
+import { defineProps } from 'vue'
+import type { BrandCategory } from '@/types'
+// import BrandsScroll from '../BrandsScroll.vue'
+
+defineProps<{
+  data: BrandCategory[] | undefined
+}>()
 
 const externalCarousel = ref<HTMLInputElement | null>(null)
 const internalCarousel = ref<HTMLInputElement | null>(null)
@@ -21,19 +28,19 @@ const carouselDummyData = [
   { name: 'Paint gel 5g 063 Barbie', productImage: ProductImage4 }
 ]
 
-const carouselCategoryData = [
-  'Devices',
-  'UV Gel Nail Polishes',
-  'Nail art',
-  'Accessories',
-  'UV Gels',
-  'Liquid / Preparations',
-  'Care',
-  'Disinfection / Hygiene',
-  'Acrylics',
-  'Outlet',
-  'Collection'
-]
+// const carouselCategoryData = [
+//   'Devices',
+//   'UV Gel Nail Polishes',
+//   'Nail art',
+//   'Accessories',
+//   'UV Gels',
+//   'Liquid / Preparations',
+//   'Care',
+//   'Disinfection / Hygiene',
+//   'Acrylics',
+//   'Outlet',
+//   'Collection'
+// ]
 
 const translationStyle = computed(() => {
   return {
@@ -76,12 +83,12 @@ const moveRight = () => {
   <!-- Category -->
   <div class="flex flex-row gap-7 items-center mb-8 overflow-x-scroll">
     <button
-      v-for="(category, index) in carouselCategoryData"
-      :class="index == selectedCategory ? 'bg-primary px-4 py-2 rounded-3xl' : 'opacity-30'"
-      :key="index"
-      @click="selectedCategory = index"
+      v-for="category in data"
+      :class="category.id == selectedCategory ? 'bg-primary px-4 py-2 rounded-3xl' : 'opacity-30'"
+      :key="category.id"
+      @click="selectedCategory = category.id"
     >
-      {{ category }}
+      {{ category.title }}
     </button>
   </div>
   <!-- Carousel Start-->

@@ -15,8 +15,7 @@
   "dependencies": {
     "@unhead/vue": "^1.10.0",
     "@vueuse/core": "^11.0.1",
-    "vue": "^3.4.29",
-    "vue-meta": "^3.0.0-alpha.2"
+    "vue": "^3.4.29"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
