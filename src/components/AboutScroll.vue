@@ -2,9 +2,9 @@
 import Img from '@/assets/image 44.svg'
 </script>
 <template>
-  <div class="my-32 h-[45.25rem] flex flex-row w-full">
-    <img :src="Img" alt="" class="w-[38rem] h-full object-contain" />
-    <div class="mx-20 py-5">
+  <div class="my-32 h-[45.25rem] max-md:h-full flex flex-row w-full">
+    <img :src="Img" alt="" class="w-[38rem] h-full object-contain max-md:hidden" />
+    <div class="max-md:px-8 md:mx-20 py-5">
       <div>
         <div class="font-thin text-[7.75rem] mb-10">ABOUT US</div>
         <div class="text-lg">

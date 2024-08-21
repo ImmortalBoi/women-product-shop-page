@@ -5,8 +5,10 @@ import Facebook from '@/assets/instagram.svg'
 import Instagram from '@/assets/facebook.svg'
 </script>
 <template>
-  <footer class="h-80 bg-primary flex flex-col justify-between">
-    <div class="h-52 py-6 px-12 gap-32 flex flex-row items-center">
+  <footer class="h-80 max-md:h-full bg-primary flex flex-col justify-between">
+    <div
+      class="h-52 max-md:h-full py-6 px-12 gap-8 md:gap-32 flex flex-row items-center max-md:flex-col"
+    >
       <div class="flex flex-row gap-8 items-start mt-3">
         <div class="flex flex-col">
           <div class="font-medium text-2xl mb-6">Informations</div>
@@ -22,10 +24,10 @@ import Instagram from '@/assets/facebook.svg'
           <div>Privacy Policy</div>
         </div>
       </div>
-      <div class="flex-shrink-0">
+      <div class="flex-shrink-0 max-md:hidden">
         <img :src="Logo" alt="Woman's Secrets" class="w-52 h-auto object-contain" />
       </div>
-      <div class="flex flex-row gap-8 w-full">
+      <div class="flex flex-row gap-8 w-full max-md:flex-col">
         <div class="flex flex-col">
           <div class="font-medium text-2xl mb-6">Contacts</div>
           <div>00966 444 673 56</div>

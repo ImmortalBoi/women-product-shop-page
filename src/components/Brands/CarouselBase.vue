@@ -74,7 +74,7 @@ const moveRight = () => {
 </script>
 <template>
   <!-- Category -->
-  <div class="flex flex-row gap-7 items-center mb-8">
+  <div class="flex flex-row gap-7 items-center mb-8 overflow-x-scroll">
     <button
       v-for="(category, index) in carouselCategoryData"
       :class="index == selectedCategory ? 'bg-primary px-4 py-2 rounded-3xl' : 'opacity-30'"
@@ -85,7 +85,11 @@ const moveRight = () => {
     </button>
   </div>
   <!-- Carousel Start-->
-  <div class="overflow-hidden whitespace-nowrap" id="external-carousel" ref="externalCarousel">
+  <div
+    class="overflow-x-scroll md:overflow-hidden whitespace-nowrap"
+    id="external-carousel"
+    ref="externalCarousel"
+  >
     <div
       class="flex flex-row gap-6 mb-5 transition ease-out duration-600"
       id="internal-carousel"
@@ -102,7 +106,7 @@ const moveRight = () => {
   </div>
 
   <!-- Carousel Buttons-->
-  <div class="flex flex-row gap-3">
+  <div class="flex flex-row gap-3 max-md:hidden">
     <button
       class="rounded-full bg-[#83B7D7] disabled:bg-[#D9D9D9]"
       @click="moveLeft"

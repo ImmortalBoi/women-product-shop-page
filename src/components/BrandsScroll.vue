@@ -3,8 +3,10 @@ import DuoGen from '@/assets/Frame 120.svg'
 import CarouselBase from './Brands/CarouselBase.vue'
 </script>
 <template>
-  <div class="h-[62.813rem] bg-primary flex flex-col items-center w-full">
-    <div class="h-[13.875rem] flex flex-col w-[56.5rem] mt-10">
+  <div class="h-[62.813rem] bg-primary flex flex-col items-center w-full max-md:h-full max-md:py-4">
+    <div
+      class="h-[13.875rem] flex flex-col w-[56.5rem] max-md:w-full max-md:h-full max-md:p-4 mt-10"
+    >
       <img :src="DuoGen" />
       <div class="text-center text-[#737373]">
         From Ancient Times To The Present Day. Our Journey Continues To Bring The Best To The Modern

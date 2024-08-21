@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 <template>
   <div
-    class="min-w-[23.5%] h-[51.3%] bg-secondary flex rounded-2xl flex-col items-center justify-center p-6"
+    class="md:min-w-[23.5%] h-[51.3%] max-md:w-96 bg-secondary flex rounded-2xl flex-col items-center justify-center p-6"
   >
     <img :src="props.productImage" alt="" class="size-64 object-fill" />
     <div class="font-normal text-lg">{{ props.name }}</div>
